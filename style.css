@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+/* Color */
+:root{
+    --primary-color: #294A74;
+    --secondary-color: #f1f2f3;
+    --transparent-color: #1f375544;
+    --hover-color: #233a576b;
+}
+
+/* Global Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Fading Event */
+.fadeOut{
+    display: none;
+    pointer-events: none;
+    
+}
+.fadeIn{
+    display: block;
+    pointer-events: all;
+    transition: 0.5s ease-in;
+}
+
+
+/* Start Quiz */
+
+#start{
+    position: relative;
+    min-height: 100vh;
+    max-width: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#start .start-btn{
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1.2rem 1.8rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+}
+#start .start-btn:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: 0.3s ease;
+}
+
+/* Rules Section */
+
+#rules{
+    min-height: 100vh;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#rules .container{
+    min-height: 40vh;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+#rules .rules-header{
+    font-size: 1.6rem;
+    font-weight: 600;
+
+}
+#rules .rules-content{
+    padding: 2rem 0;
+    border-top: 1px solid var(--primary-color);
+}
+#rules .rules-content p{
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+#rules .rules-content p span{
+    color: var(--primary-color);
+}
+#rules .buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0 0 0;
+}
+#rules .line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+.buttons a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    padding: 0.4rem 0.8rem;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 3px;
+}
+.buttons a:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+/* Main Content */
+
+#main-content{
+    min-height: 100vh;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-content .container{
+    min-height: 70vh;
+    width: 600px;
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.quiz-header{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--transparent-color);
+}
+
+.quiz-header .decision{
+    font-size: 2rem;
+    font-weight: 500;
+}
+/* .quiz-header .timer{
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: var(--transparent-color);
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    color: var(--primary-color);
+}
+.quiz-header .timer .time{
+    background-color: #111111a6;
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    color: var(--secondary-color);
+} */
+
+.question{
+    padding-top: 1.5rem;
+}
+.question .ques{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.options{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 2px solid var(--transparent-color);
+}
+.options p{
+    width: 100%;
+    background-color: var(--transparent-color);
+    padding: 0.6rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    color: #111111;
+    cursor: pointer;
+}
+.options p:hover{
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+    /* cursor: pointer; */
+}
+.options .correct{
+    background-color: yellowgreen;
+}
+.options .wrong{
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+.footer{
+    display: flex;
+    padding-top: 1rem;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.footer .nquestion{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.footer .nquestion span{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.next-que-btn{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    padding: 0.4rem 0.8rem;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 3px;
+}
+.next-que-btn:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: 0.3s ease;
+}
+.hide{
+    display: none;
+}
+
+/* Result Section */
+#result{
+    min-height: 100vh;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#result .container{
+    min-height: 30vh;
+    width: 400px;
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+#result .result-header{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#result .buttons{
+    display: flex;
+    justify-content: center;
+}
+#result .buttons a{
+    padding: 0.6rem 1.6rem ;
+    font-size: 1.2rem;
+    border: 2px solid var(--primary-color);
+}
+
+.disable{
+    pointer-events: none;
+}
